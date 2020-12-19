@@ -207,6 +207,7 @@ mediaRouter.get("/export/csv", (req, res, next) => {
       pipeline(jsonReadableStream, json2csv, res, err => {
         if (err) {
           console.log(err)
+          console.log("ERR: ", err)
           next(err)
         } else {
           console.log("File successfully exported to csv.")
