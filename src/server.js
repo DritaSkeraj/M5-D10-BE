@@ -50,6 +50,7 @@ console.log(listEndpoints(server))
 server.listen(port, () => {
   if (process.env.NODE_ENV === "production") {
     console.log("Running on cloud on port", port)
+    console.log("prod url::::: ", process.env.FE_URL_PROD);
   } else {
     console.log("Running locally on port", port)
   }
